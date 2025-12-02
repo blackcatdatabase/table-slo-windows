@@ -1,6 +1,7 @@
--- Auto-generated from feature-modules-postgres.psd1 (map@mtime:2025-11-27T14:08:26Z)
+-- Auto-generated from feature-modules-postgres.yaml (map@94ebe6c)
 -- engine: postgres
--- table:  slo_windows_rollup
+-- table:  slo_rollup
+
 -- SLO last computed status
 CREATE OR REPLACE VIEW vw_slo_rollup AS
 WITH ranked AS (
