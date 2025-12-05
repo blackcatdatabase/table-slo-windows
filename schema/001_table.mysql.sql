@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-mysql.yaml (map@74ce4f4)
+-- Auto-generated from schema-map-mysql.yaml (map@sha1:5E62933580349BE7C623D119AC9D1301A62F03EF)
 -- engine: mysql
 -- table:  slo_windows
 
@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS slo_windows (
   target_pct DECIMAL(5,2) NOT NULL,
   window_interval VARCHAR(64) NOT NULL,
   created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-  CONSTRAINT uq_slo_windows_name UNIQUE (name)
+  CONSTRAINT ux_slo_windows_name UNIQUE (name)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci ROW_FORMAT=DYNAMIC;
