@@ -6,11 +6,11 @@ Configured service-level objective windows/targets.
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
 | created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
-| objective | mysql: JSON / postgres: JSONB | NO |  | JSON description of what is being measured. |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| window_interval | mysql: VARCHAR(64) / postgres: INTERVAL | NO |  | Interval over which the SLO is computed. |
 | name | VARCHAR(120) | NO |  | SLO identifier. |
+| objective | mysql: JSON / postgres: JSONB | NO |  | JSON description of what is being measured. |
 | target_pct | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Target success percentage. |
+| window_interval | mysql: VARCHAR(64) / postgres: INTERVAL | NO |  | Interval over which the SLO is computed. |
 
 ## Engine Details
 
