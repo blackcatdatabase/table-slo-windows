@@ -5,12 +5,12 @@ Configured service-level objective windows/targets.
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| created_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | name | VARCHAR(120) | NO |  | SLO identifier. |
-| objective | JSON | NO |  | JSON description of what is being measured. |
-| target_pct | DECIMAL(5,2) | NO |  | Target success percentage. |
-| window_interval | VARCHAR(64) | NO |  | Interval over which the SLO is computed. |
+| objective | mysql: JSON / postgres: JSONB | NO |  | JSON description of what is being measured. |
+| target_pct | mysql: DECIMAL(5,2) / postgres: NUMERIC(5,2) | NO |  | Target success percentage. |
+| window_interval | mysql: VARCHAR(64) / postgres: INTERVAL | NO |  | Interval over which the SLO is computed. |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 
 ## Engine Details
 
@@ -43,5 +43,5 @@ Indexes:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_slo_windows | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
-| vw_slo_windows | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
+| vw_slo_windows | mysql | algorithm=MERGE, security=INVOKER | [../schema/040_views.mysql.sql](../schema/040_views.mysql.sql) |
+| vw_slo_windows | postgres |  | [../schema/040_views.postgres.sql](../schema/040_views.postgres.sql) |
