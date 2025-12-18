@@ -1,0 +1,26 @@
+{
+  "tables": {
+    "slo_windows": {
+      "columns": {
+        "created_at": {
+          "strategy": "passthrough"
+        },
+        "id": {
+          "strategy": "passthrough"
+        },
+        "name": {
+          "strategy": "passthrough"
+        },
+        "objective": {
+          "strategy": "passthrough"
+        },
+        "target_pct": {
+          "strategy": "passthrough"
+        },
+        "window_interval": {
+          "strategy": "passthrough"
+        }
+      }
+    }
+  }
+}
